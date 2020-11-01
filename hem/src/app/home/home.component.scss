@@ -1,0 +1,37 @@
+@import "colors";
+
+.container {
+  font-family: cartoon;
+  position: relative;
+  height: 100%;
+
+  .game-name {
+    font-size: 120px;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+      text-shadow: 2px 2px 4px $white-ff;
+    }
+
+    .first-fraze {
+      color: $blue-73;
+    }
+
+    .second-fraze {
+      color: $green-5c;
+    }
+
+  }
+
+  ::ng-deep .btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}

@@ -1,0 +1,62 @@
+@import 'colors';
+
+:host {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn {
+  font-family: cartoon;
+  outline: none;
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px $black-69;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border: 3px solid $white-ad;
+    transform: translate(4px, 4px);
+    border-radius: 10px;
+    box-shadow: 0 0 3px $black-69;
+  }
+
+  &.small {
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 43px
+  }
+
+  &.normal {
+    padding: 10px 15px;
+    background: $gray-ed;
+  }
+
+  &.custom {
+    font-size: inherit;
+    width: inherit;
+    height: inherit;
+    text-shadow: inherit;
+  }
+
+  &.big {
+    font-size: 40px;
+    padding: 15px 20px;
+    width: 400px;
+    height: 100px;
+  }
+
+
+}

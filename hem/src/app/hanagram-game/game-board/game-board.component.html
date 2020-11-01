@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="overflow" *ngIf="isGameOver"></div>
+  <div class="lives">Szanse: {{ lives }}</div>
+
+  <div class="password">
+    <span class="password-letter" *ngFor="let p of chosenPassword; let i = index">{{ p.letter }}</span>
+  </div>
+
+  <div class="alphabet">
+    <app-button
+      #alphabetLetter
+      *ngFor="let letter of alphabet; let i = index"
+      [bgColor]="letter.bgColor"
+      size="custom"
+      (click)="handleLetterClick(alphabetLetter, letter)"
+    >{{ letter.char }}
+    </app-button>
+  </div>
+
+  <br>
+  <div class="next-round-btn">
+    <app-button
+      *ngIf="nextRound && !isGameOver"
+      (click)="nextGame()"
+      size="custom"
+    > Nastepna runda ->
+    </app-button>
+  </div>
+
+</div>
