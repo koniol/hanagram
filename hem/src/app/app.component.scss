@@ -1,0 +1,8 @@
+@import "colors";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: $white-fe;
+  background: radial-gradient(circle, $white-fe 0%, $blue-ff 88%);
+}

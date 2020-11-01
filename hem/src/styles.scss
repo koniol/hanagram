@@ -1,0 +1,15 @@
+@font-face {
+  font-family: cartoon;
+  src: url(assets/fonts/Cute-Stitch.otf);
+  src: url(assets/fonts/Cute-Stitch.ttf);
+}
+
+html, p, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: cartoon;
+}
+
